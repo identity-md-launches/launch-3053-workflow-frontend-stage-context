@@ -1,0 +1,31 @@
+{
+  "name": "squeekboard-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/manifest.mjs --public && vite",
+    "build": "tsc -b && vite build && node scripts/manifest.mjs",
+    "typecheck": "tsc -b",
+    "manifest": "node scripts/manifest.mjs",
+    "verify": "node scripts/verify-manifest.mjs",
+    "test": "node --test tests/unit.test.mjs && playwright test",
+    "preview": "vite preview --outDir ../dist"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.4.0",
+    "@tanstack/react-query": "^5.106.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "viem": "^2.57.16",
+    "wagmi": "^3.7.11"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}

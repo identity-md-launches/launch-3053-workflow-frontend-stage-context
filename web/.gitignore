@@ -1,0 +1,7 @@
+node_modules/
+*.tgz
+test-results/
+playwright-report/
+# dev-server copies written by `node scripts/manifest.mjs --public`
+public/imd-deployment.json
+public/abi/
