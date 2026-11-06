@@ -1,0 +1,225 @@
+{
+  "checkedAt": "2026-11-06T12:23:26.612Z",
+  "durationMs": 27764.555,
+  "passed": 19,
+  "failed": 0,
+  "skipped": 0,
+  "scope": "Chromium; all public RPCs and wallet requests mocked, external requests blocked; no live transactions",
+  "tests": [
+    {
+      "title": "disconnected: public state, one connect control, actions disabled, no errors",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 658
+        }
+      ]
+    },
+    {
+      "title": "runtime config comes from imd-deployment.json and its ABI files",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 478
+        }
+      ]
+    },
+    {
+      "title": "connect sheet lists discovered wallets by name, never 'Injected', and closes with Escape",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 523
+        }
+      ]
+    },
+    {
+      "title": "wallet rejection on connect leaves a one-line note and the sheet open",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 548
+        }
+      ]
+    },
+    {
+      "title": "wrong chain: Switch to Sepolia falls back to wallet_addEthereumChain with the vetted parameters",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 671
+        }
+      ]
+    },
+    {
+      "title": "mint then spin: simulated, signed by the wallet, confirmed, and reflected in live reads",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 917
+        }
+      ]
+    },
+    {
+      "title": "a rejected signature sends nothing and says so",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 730
+        }
+      ]
+    },
+    {
+      "title": "a contract revert is shown in plain words before the wallet opens",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 706
+        }
+      ]
+    },
+    {
+      "title": "already spun today and an empty-gas wallet show their states",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 747
+        }
+      ]
+    },
+    {
+      "title": "RPC failure shows a recoverable error instead of a blank board",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7333
+        }
+      ]
+    },
+    {
+      "title": "no sideways scroll at 320px with a full 100-row board and a connected wallet",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1334
+        }
+      ]
+    },
+    {
+      "title": "no sideways scroll at 390px with a full 100-row board and a connected wallet",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1455
+        }
+      ]
+    },
+    {
+      "title": "desktop screenshot with a populated board",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1171
+        }
+      ]
+    },
+    {
+      "title": "mobile connect sheet is a bottom sheet with Open in rows",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 551
+        }
+      ]
+    },
+    {
+      "title": "share image loads from the gateway subpath at 1200 by 630",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 716
+        }
+      ]
+    },
+    {
+      "title": "isolated public read failure and retry at 390",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7773
+        }
+      ]
+    },
+    {
+      "title": "isolated public read failure and retry at 1440",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7863
+        }
+      ]
+    },
+    {
+      "title": "failed refresh preserves public values and recovers with its own retry",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7987
+        }
+      ]
+    },
+    {
+      "title": "mobile discovery keeps the EIP-6963 wallet without window.ethereum",
+      "browser": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 854
+        }
+      ]
+    }
+  ],
+  "screenshotRecheck": {
+    "checkedAt": "2026-11-06T12:25:35.373Z",
+    "passed": 1,
+    "failed": 0,
+    "change": "Wait for enabled spin control and finish finite CSS transitions before desktop capture."
+  }
+}

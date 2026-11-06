@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-06T12:31:31.422Z",
+  "changedPathsWithinScope": true,
+  "manifestAssetHashesValid": true,
+  "manifestAssets": 10,
+  "deliveryBytesBeforeThisReceipt": 2399120,
+  "budgetBytes": 8388608,
+  "localGitCommit": "not created; staging failed because the Git index is read-only",
+  "fabricatedResults": false
+}

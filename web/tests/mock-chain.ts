@@ -13,6 +13,7 @@ import {
   keccak256,
   pad,
   toHex,
+  toFunctionSelector,
   type Abi,
   type Address,
   type Hex,
@@ -190,11 +191,16 @@ function answer(s: ChainState, req: { id: number; method: string; params?: unkno
 }
 
 /** Routes every public RPC in the network block to the mock chain. */
-export async function mockRpc(page: Page, s: ChainState, opts: { failReads?: boolean } = {}) {
+export async function mockRpc(page: Page, s: ChainState, opts: { failReads?: boolean; failSupplyReads?: boolean } = {}) {
   const urls: string[] = network.network.rpcUrls;
   await page.route((u) => urls.some((x) => u.href.startsWith(x)), async (route: Route) => {
     if (opts.failReads) return route.fulfill({ status: 503, body: "unavailable" });
     const body = route.request().postDataJSON();
+    const batch = Array.isArray(body) ? body : [body];
+    if (opts.failSupplyReads && batch.some((req) => req.method === "eth_call" &&
+      (req.params?.[0]?.data ?? req.params?.[0]?.input)?.startsWith(toFunctionSelector("totalSupply()")))) {
+      return route.fulfill({ status: 503, body: "public supply reads unavailable" });
+    }
     const res = Array.isArray(body) ? body.map((b) => answer(s, b)) : answer(s, body);
     await route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(res) });
   });

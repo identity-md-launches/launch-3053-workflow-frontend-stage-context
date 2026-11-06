@@ -203,8 +203,17 @@ export function App() {
             <p className="muted">
               {spins !== undefined && participants !== undefined
                 ? `${plural(Number(participants), "wallet has", "wallets have")} spun ${plural(Number(spins), "time", "times")}.`
-                : "Loading totals…"}
+                : pub.isPending ? "Loading totals…" : "Totals unavailable."}
             </p>
+            {pub.error && (
+              <div className="empty">
+                <p className="error" role="alert">Unable to load supply and totals.</p>
+                {pub.data && <p className="muted">Last successful values are shown.</p>}
+                <button className="btn btn-secondary" disabled={pub.isFetching} onClick={() => pub.refetch()}>
+                  {pub.isFetching ? "Retrying supply and totals…" : "Retry supply and totals"}
+                </button>
+              </div>
+            )}
           </div>
           <Leaderboard rows={rows} me={address} loading={board.isPending} error={board.error ? describeError(board.error) : null} retry={() => board.refetch()} />
         </section>
@@ -217,7 +226,7 @@ export function App() {
               <p>
                 {supply !== undefined && maxSupply !== undefined
                   ? `${formatCount(supply)} of ${formatCount(maxSupply)} minted.`
-                  : "Reading supply…"}{" "}
+                  : pub.isPending ? "Reading supply…" : "Supply unavailable."}{" "}
                 One free badge per wallet; you pay gas only.
               </p>
               <ContractLink name="HamsterBadge" address={badge.address} explorer={dep.explorer} />

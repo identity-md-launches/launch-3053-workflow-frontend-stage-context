@@ -1,0 +1,20 @@
+{
+  "attemptedAt": "2026-11-06T12:24:33.739Z",
+  "launch": "failed",
+  "reason": "Playwright WebKit runtime dependencies unavailable",
+  "missingLibraries": [
+    "libgtk-4.so.1",
+    "libgraphene-1.0.so.0",
+    "libevent-2.1.so.7",
+    "libgstgl-1.0.so.0",
+    "libgstcodecparsers-1.0.so.0",
+    "libavif.so.16",
+    "libharfbuzz-icu.so.0",
+    "libwayland-server.so.0",
+    "libmanette-0.2.so.0",
+    "libenchant-2.so.2",
+    "libsecret-1.so.0",
+    "libhyphen.so.0"
+  ],
+  "interactionTests": "not run"
+}

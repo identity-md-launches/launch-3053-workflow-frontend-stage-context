@@ -1,7 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import { ACCOUNT, BADGE, CHECKIN, mockRpc, mockWallet, network, newChain } from "./mock-chain";
 
-// Screenshots for the reviewer go outside the delivered tree (removed before submission).
+// Scratch by default; set SHOTS_DIR to retain selected validation captures under docs/.
 const SHOTS = process.env.SHOTS_DIR ?? "../test/scratch/shots";
 const errorsOf = (page: Page) => {
   const errors: string[] = [];
@@ -181,7 +181,9 @@ test("RPC failure shows a recoverable error instead of a blank board", async ({ 
   await mockRpc(page, newChain(), { failReads: true });
   await page.goto("./");
   await expect(page.getByText("Unable to reach the Sepolia RPC.", { exact: false })).toBeVisible({ timeout: 20_000 });
-  await expect(page.getByRole("button", { name: "Retry" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Retry", exact: true })).toBeVisible();
+  await expect(page.getByText("Unable to load supply and totals.", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Retry supply and totals", exact: true })).toBeVisible();
 });
 
 for (const width of [320, 390]) {
@@ -215,7 +217,8 @@ test("desktop screenshot with a populated board", async ({ page }) => {
   await connect(page);
   await page.getByRole("button", { name: "Mint badge" }).click();
   await expect(page.getByText("Badge #42 minted.")).toBeVisible();
-  await page.screenshot({ path: `${SHOTS}/desktop-1440.png`, fullPage: true });
+  await expect(page.getByRole("button", { name: "Spin today", exact: true })).toBeEnabled();
+  await page.screenshot({ path: `${SHOTS}/desktop-1440.png`, fullPage: true, animations: "disabled" });
   await page.getByRole("button", { name: /disconnect/i }).click();
   await page.getByRole("button", { name: "Connect wallet" }).click();
   await page.screenshot({ path: `${SHOTS}/sheet-1440.png` });

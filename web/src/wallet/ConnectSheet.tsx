@@ -30,7 +30,7 @@ export function ConnectSheet({ size = "small" }: { size?: "small" | "large" }) {
   const named = connectors.some((c) => c.type === "injected" && c.id !== "injected");
   const listed = [...connectors.filter((c) => c.type === "injected"), ...connectors.filter((c) => c.type !== "injected")]
     .filter((c) => !(c.id === "injected" && named))
-    .filter((c) => !mobile || c.type !== "injected");
+    .filter((c) => !mobile || c.id !== "injected");
   const label = (c: Connector) =>
     c.id === "injected" ? "Browser wallet" : c.id === "coinbaseWalletSDK" && mobile ? "Coinbase Smart Wallet" : c.name;
   const icon = (c: Connector) => c.icon ?? WALLET_ICONS[c.id];

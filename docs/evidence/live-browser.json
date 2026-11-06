@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-06T12:26:11.330Z",
+  "scope": "Chromium runtime, public RPCs from manifest, no wallet, no mock routing, no transactions",
+  "title": "SqueekBoard: mint a Hamster Badge, spin daily",
+  "paragraphs": [
+    "Totals unavailable.",
+    "Unable to load supply and totals.",
+    "Unable to reach the Sepolia RPC. Check your connection and try again.",
+    "Supply unavailable. One free badge per wallet; you pay gas only.",
+    "0x9c4578353da45497C8d5239bE40385B397708680View HamsterBadge on the explorer",
+    "One spin per UTC day while you hold a badge. Missing a whole day resets your current streak; your longest streak and check-ins stay.",
+    "0x9a656cd7a47bbd4579Cd166136B641ed8E519347View WheelSpinCheckIn on the explorer"
+  ],
+  "mintDisabled": true,
+  "spinDisabled": true,
+  "overflow": 0,
+  "scriptErrors": [],
+  "httpFailures": [],
+  "diagnostic": {
+    "checkedAt": "2026-11-06T12:29:35.410Z",
+    "directChainIdRequests": [
+      {
+        "url": "https://ethereum-sepolia-rpc.publicnode.com",
+        "error": "Failed to fetch"
+      },
+      {
+        "url": "https://rpc.sepolia.ethpandaops.io",
+        "error": "Failed to fetch"
+      },
+      {
+        "url": "https://sepolia.rpc.sentio.xyz",
+        "error": "Failed to fetch"
+      }
+    ],
+    "requestFailures": [
+      {
+        "url": "https://sepolia.rpc.sentio.xyz/",
+        "error": "net::ERR_EMPTY_RESPONSE"
+      },
+      {
+        "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+        "error": "net::ERR_EMPTY_RESPONSE"
+      },
+      {
+        "url": "https://rpc.sepolia.ethpandaops.io/",
+        "error": "net::ERR_EMPTY_RESPONSE"
+      }
+    ]
+  }
+}

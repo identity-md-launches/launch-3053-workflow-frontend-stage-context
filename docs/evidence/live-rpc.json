@@ -1,0 +1,159 @@
+{
+  "checkedAt": "2026-11-06T12:21:40.089Z",
+  "kind": "read-only public RPC; no signing or broadcast",
+  "results": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "attempts": [
+        {
+          "at": "2026-11-06T12:21:39.770Z",
+          "httpStatus": 200,
+          "chainId": 11155111,
+          "expectedChain": true,
+          "code": [
+            {
+              "name": "HamsterBadge",
+              "address": "0x9c4578353da45497c8d5239be40385b397708680",
+              "nonempty": true,
+              "bytes": 6743,
+              "keccak256": "0x546b87ff98452ef8d80b0287bdd6cf8bf5802085233867f5ece94988a09f09de"
+            },
+            {
+              "name": "WheelSpinCheckIn",
+              "address": "0x9a656cd7a47bbd4579cd166136b641ed8e519347",
+              "nonempty": true,
+              "bytes": 4150,
+              "keccak256": "0xd66fa1083dee1d2c8b204479789245e416b6cec595afb0beae594cee06e7b274"
+            }
+          ],
+          "state": [
+            {
+              "contract": "HamsterBadge",
+              "function": "totalSupply",
+              "value": "0"
+            },
+            {
+              "contract": "HamsterBadge",
+              "function": "MAX_SUPPLY",
+              "value": "10000"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalParticipants",
+              "value": "0"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalSpins",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://rpc.sepolia.ethpandaops.io",
+      "attempts": [
+        {
+          "at": "2026-11-06T12:21:39.781Z",
+          "httpStatus": 200,
+          "chainId": 11155111,
+          "expectedChain": true,
+          "code": [
+            {
+              "name": "HamsterBadge",
+              "address": "0x9c4578353da45497c8d5239be40385b397708680",
+              "nonempty": true,
+              "bytes": 6743,
+              "keccak256": "0x546b87ff98452ef8d80b0287bdd6cf8bf5802085233867f5ece94988a09f09de"
+            },
+            {
+              "name": "WheelSpinCheckIn",
+              "address": "0x9a656cd7a47bbd4579cd166136b641ed8e519347",
+              "nonempty": true,
+              "bytes": 4150,
+              "keccak256": "0xd66fa1083dee1d2c8b204479789245e416b6cec595afb0beae594cee06e7b274"
+            }
+          ],
+          "state": [
+            {
+              "contract": "HamsterBadge",
+              "function": "totalSupply",
+              "value": "0"
+            },
+            {
+              "contract": "HamsterBadge",
+              "function": "MAX_SUPPLY",
+              "value": "10000"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalParticipants",
+              "value": "0"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalSpins",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://sepolia.rpc.sentio.xyz",
+      "attempts": [
+        {
+          "at": "2026-11-06T12:21:39.788Z",
+          "httpStatus": 429,
+          "error": "{\"code\":8,\"message\":\"JSON-RPC batch exceeds the maximum of 5 requests\"}"
+        },
+        {
+          "at": "2026-11-06T12:24:01.134Z",
+          "httpStatus": 200,
+          "note": "Retried as batches of three and four, within the endpoint limit of five requests.",
+          "chainId": 11155111,
+          "expectedChain": true,
+          "code": [
+            {
+              "name": "HamsterBadge",
+              "address": "0x9c4578353da45497c8d5239be40385b397708680",
+              "nonempty": true,
+              "bytes": 6743,
+              "keccak256": "0x546b87ff98452ef8d80b0287bdd6cf8bf5802085233867f5ece94988a09f09de"
+            },
+            {
+              "name": "WheelSpinCheckIn",
+              "address": "0x9a656cd7a47bbd4579cd166136b641ed8e519347",
+              "nonempty": true,
+              "bytes": 4150,
+              "keccak256": "0xd66fa1083dee1d2c8b204479789245e416b6cec595afb0beae594cee06e7b274"
+            }
+          ],
+          "state": [
+            {
+              "contract": "HamsterBadge",
+              "function": "totalSupply",
+              "value": "0"
+            },
+            {
+              "contract": "HamsterBadge",
+              "function": "MAX_SUPPLY",
+              "value": "10000"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalParticipants",
+              "value": "0"
+            },
+            {
+              "contract": "WheelSpinCheckIn",
+              "function": "totalSpins",
+              "value": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

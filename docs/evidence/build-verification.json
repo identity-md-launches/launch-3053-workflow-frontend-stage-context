@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-06T12:28:46.138Z",
+  "sourceCommit": "b52358ddcbb2960ee1c972f5ad0d361658adbd86",
+  "pinnedDeploymentMatches": true,
+  "pinnedNetworkMatches": true,
+  "contracts": [
+    {
+      "name": "HamsterBadge",
+      "abiHash": "e702ccdf8ebab67d53d8dcc358f7be967944c13f0c07aea207d7d2a2ae9a8088",
+      "pinnedBytesMatch": true
+    },
+    {
+      "name": "WheelSpinCheckIn",
+      "abiHash": "78b2afdc4792f200425e5b948070d56ba372d3c547dbbc8fd4ad712f52877dcb",
+      "pinnedBytesMatch": true
+    }
+  ],
+  "manifest": {
+    "sha256": "f7282a4dfcd9d30356ff24bd9637439e7fbaabd29781d3fb506eb189aa675624",
+    "assets": 10,
+    "exportBytes": 810035,
+    "verification": "OK imd-deployment.json: 2 contracts, 10 assets, 810035 bytes total"
+  },
+  "commands": [
+    {
+      "command": "npm run build (from web/)",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck (from web/)",
+      "exitCode": 0
+    },
+    {
+      "command": "node --test tests/unit.test.mjs (from web/)",
+      "exitCode": 0,
+      "passed": 2
+    }
+  ]
+}
